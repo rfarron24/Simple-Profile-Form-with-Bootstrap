@@ -1,0 +1,378 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+
+
+
+    <title>Profile Entry</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+
+
+
+  </head>
+
+  <body onload="fetchges()">
+
+    <div class="container">
+      <div class="header clearfix">
+        <h3 class="text-muted">Profiles</h3>
+      </div>
+
+      <div class="jumbotron">
+        <h2>GES Profile Entry</h2>
+        <form class="form-horizontal" id="formEntry">
+
+          <div class="form-group">
+          <label for="idID" class="control-label col-sm-2">ID : </label>
+          <div class="col-sm-8">
+          <input type="text" class="form-control" id="idID" placeholder="ID" style="width: 45%; background-color:#F0DEA4; font-weight:bold;">
+        </div>
+        </div>
+
+          <div class="form-group">
+          <label class="control-label col-sm-2" for="nameID">Full Name : </label>
+          <div class="col-sm-8">
+          <input type="text" class="form-control" id="nameID" placeholder="Full Name">
+          </div>
+        </div>
+
+        <div class="form-group">
+        <label class="control-label col-sm-2" for="sexID">Sex : </label>
+        <div class="col-sm-8">
+        <select class="form-control" id="sexID" style="width:45%;">
+        <option value="Male">Male</option>
+        <option value="Female">Female</option>
+        </select>
+        </div>
+      </div>
+
+          <div class="form-group">
+          <label class="control-label col-sm-2" for="ageID">Age : </label>
+          <div class="col-sm-8">
+          <input type="text" class="form-control" id="ageID" placeholder="Age">
+          </div>
+        </div>
+
+          <div class="form-group">
+          <label class="control-label col-sm-2" for="birthdateID">Date of Birth : </label>
+          <div class="col-sm-8">
+          <input type="date" class="form-control" id="birthdateID"  max="1979-12-31" style="width: 45%;">
+          </div>
+        </div>
+
+          <div class="form-group">
+          <label class="control-label col-sm-2" for="weightID">Weight : </label>
+          <div class="col-sm-8">
+          <input type="text" class="form-control" id="weightID" placeholder="Kilograms">
+          </div>
+        </div>
+
+          <div class="form-group">
+          <label class="control-label col-sm-2" for="heightID">Height : </label>
+          <div class="col-sm-8">
+          <input type="text" class="form-control" id="heightID" placeholder="Meters">
+          </div>
+        </div>
+
+          <div class="form-group">
+          <label class="control-label col-sm-2" for="eyeID">Eye Color : </label>
+          <div class="col-sm-8">
+          <input type="text" class="form-control" id="eyeID" placeholder="...">
+          </div>
+        </div>
+
+          <div class="form-group">
+          <label class="control-label col-sm-2" for="hairID">Hair Color : </label>
+          <div class="col-sm-8">
+          <input type="text" class="form-control" id="hairID" placeholder="...">
+          </div>
+        </div>
+
+          <div class="form-group" id="bpcol">
+          <label class="control-label col-sm-2" for="birthplaceID">Birthplace : </label>
+          <div class="col-sm-8">
+          <select id="birthplaceID" class="form-control" style="width: 45%;"  onclick="city()">
+              <option selected disabled>Choose territory...</option>
+              <option value="Alexander">Alexander</option>
+              <option value="Arkridge">Arkridge</option>
+              <option value="Azel">Azel</option>
+              <option value="Celes">Celes</option>
+              <option value="Juno">Juno</option>
+              <option value="Latre">Latre</option>
+              <option value="Midray">Midray</option>
+              <option value="Mosh">Mosh</option>
+              <option value="Northern Mainands">Northern Mainands</option>
+              <option value="Terravine">Terravine</option>
+              <option value="Torsk">Torsk</option>
+              <option value="Veccel">Veccel</option>
+              <option value="Venom">Venom</option>
+              <option value="East Viea">East Viea</option>
+              <option value="South Viea">South Viea</option>
+              <option value="Zathurn">Zathurn</option>
+          </select>
+
+          </div>
+
+        </div>
+
+        <script type="text/javascript">
+            function city(){
+              var birthPlace = document.getElementById('birthplaceID');
+              var city = document.getElementById('selectCity');
+
+
+              if(document.getElementById('birthplaceID').value == 'Alexander') {
+                document.getElementById('selectCity').innerHTML = '';
+                city.innerHTML +=
+                '<option id="a" value="Armand">Armand</option>'+
+                '<option id="a" value="Bellevenue">Bellevenue</option>'+
+                '<option id="a" value="Creste">Creste</option>'+
+                '<option id="a" value="Great City of Alexander">Great City of Alexander</option>'+
+                '<option id="a" value="Hermond">Hermond</option>'+
+                '<option id="a" value="Ilrieth">Ilrieth</option>'+
+                '<option id="a" value="Jeanarc">Jeanarc</option>'+
+                '<option id="a" value="Livingwood">Livingwood</option>'+
+                '<option id="a" value="Mistell Coast">Mistell Coast</option>'+
+                '<option id="a" value="Vernecastell">Vernecastell</option>';
+
+              }else
+                if(document.getElementById('birthplaceID').value == 'Arkridge') {
+                  document.getElementById('selectCity').innerHTML = '';
+                  city.innerHTML +=
+                  '<option id="a" value="Arrano">Arrano</option>'+
+                  '<option id="a" value="Erwizi">Erwizi</option>'+
+                  '<option id="a" value="Dimarinski">Dimarinski</option>'+
+                  '<option id="a" value="Kaltrach">Kaltrach</option>'+
+                  '<option id="a" value="Letagin">Letagin</option>'+
+                  '<option id="a" value="Marunsk">Marunsk</option>'+
+                  '<option id="a" value="Mossiah">Mossiah</option>'+
+                  '<option id="a" value="Otso">Otso</option>'+
+                  '<option id="a" value="Suwedo">Suwedo</option>'+
+                  '<option id="a" value="Tarufa">Tarufa</option>';
+
+            }else
+              if(document.getElementById('birthplaceID').value == 'Azel') {
+                document.getElementById('selectCity').innerHTML = '';
+                city.innerHTML +=
+                '<option id="a" value="Ellarach">Ellarach</option>'+
+                '<option id="a" value="Dinger">Dinger</option>'+
+                  '<option id="a" value="Glidenarch">Glidenarch</option>'+
+                '<option id="a" value="Merjole">Merjole</option>'+
+                '<option id="a" value="Minks">Minks</option>'+
+                '<option id="a" value="Wallen">Wallen</option>';
+            }else
+              if(document.getElementById('birthplaceID').value == 'Celes'){
+                document.getElementById('selectCity').innerHTML = '';
+                city.innerHTML +=
+                '<option id="a" value="Abott">Abott</option>'+
+                '<option id="a" value="Glidenarch">Bonnes</option>'+
+                '<option id="a" value="Cyro">Cyro</option>'+
+                '<option id="a" value="Hangar">Hangar</option>'+
+                '<option id="a" value="Pillar">Pillar</option>'+
+                '<option id="a" value="Tribute">Tribute</option>';
+              }else
+                if(document.getElementById('birthplaceID').value == 'Juno'){
+                  document.getElementById('selectCity').innerHTML = '';
+                  city.innerHTML +=
+                  '<option id="a" value="Albanuis">Albanuis</option>'+
+                  '<option id="a" value="Andelis">Andelis</option>'+
+                  '<option id="a" value="Crinita">Crinita</option>'+
+                  '<option id="a" value="Frey">Frey</option>'+
+                  '<option id="a" value="Krafan">Krafan</option>'+
+                  '<option id="a" value="Leune">Leune</option>' +
+                  '<option id="a" value="Simisel">Simisel</option>' +
+                  '<option id="a" value="Swansthem">Swansthem</option>'+
+                  '<option id="a" value="Vitatran">Vitatran</option>'+
+                  '<option id="a" value="Vlagga">Vlagga</option>'+
+                  '<option id="a" value="Zenaba">Zenaba</option>'+
+                  '<option id="a" value="Zenba">Zenba</option>';
+                }else
+                  if(document.getElementById('birthplaceID').value == 'Latre'){
+                    document.getElementById('selectCity').innerHTML = '';
+                    city.innerHTML +=
+                    '<option id="a" value="Amberbrook">Amberbrook</option>'+
+                    '<option id="a" value="Delli">Delli</option>'+
+                    '<option id="a" value="Flitch">Flitch</option>'+
+                    '<option id="a" value="Sabiel">Sabiel</option>'+
+                    '<option id="a" value="Sulfan">Sulfan</option>';
+                  }else
+                    if(document.getElementById('birthplaceID').value == 'Midray'){
+                      document.getElementById('selectCity').innerHTML = '';
+                      city.innerHTML +=
+                      '<option id="a" value="Cathaway">Cathaway</option>'+
+                      '<option id="a" value="Fern">Fern</option>'+
+                      '<option id="a" value="Hirjait">Hirjait</option>'+
+                      '<option id="a" value="Ifliem">Ifliem</option>'+
+                      '<option id="a" value="Islegate">Islegate</option>'+
+                      '<option id="a" value="Kradstan">Kradstan</option>' +
+                      '<option id="a" value="Lebune">Lebune</option>' +
+                      '<option id="a" value="Mikhra">Mikhra</option>'+
+                      '<option id="a" value="Pinnari">Pinnari</option>'+
+                      '<option id="a" value="Tundra">Tundra</option>';
+                    }else
+                      if(document.getElementById('birthplaceID').value == 'Mosh'){
+                        document.getElementById('selectCity').innerHTML = '';
+                        city.innerHTML +=
+                        '<option id="a" value="Anvolli">Anvolli</option>'+
+                        '<option id="a" value="Bellmont">Bellmont</option>'+
+                        '<option id="a" value="Claymore">Claymore</option>'+
+                        '<option id="a" value="Hammersforth">Hammersforth</option>'+
+                        '<option id="a" value="Illuvias">Illuvias</option>'+
+                        '<option id="a" value="Lunarlute">Lunarlute</option>'+
+                        '<option id="a" value="Misisles">Misisles</option>'+
+                        '<option id="a" value="Oberch">Oberch</option>'+
+                        '<option id="a" value="Ophellum">Ophellum</option>'+
+                        '<option id="a" value="Ouluf">Ouluf</option>'+
+                        '<option id="a" value="Reverswode">Reverswode</option>'+
+                        '<option id="a" value="Rivelnieve">Rivelnieve</option>'+
+                        '<option id="a" value="Rootbeak">Rootbeak</option>'+
+                        '<option id="a" value="Segiberfrons">Segiberfrons</option>'+
+                        '<option id="a" value="Trident">Trident</option>'+
+                        '<option id="a" value="Tristan">Tristan</option>'+
+                        '<option id="a" value="Tusseas">Tusseas</option>'+
+                        '<option id="a" value="Volant">Volant</option>'+
+                        '<option id="a" value="Wildwood">Wildwood</option>'+
+                        '<option id="a" value="Zurreil">Zurreil</option>';
+                      }else
+                        if(document.getElementById('birthplaceID').value == 'Northern Mainands'){
+                          document.getElementById('selectCity').innerHTML = '';
+                          city.innerHTML +=
+                          '<option id="a" value="Canyon">Canyon</option>'+
+                          '<option id="a" value="Rock">Rock</option>';
+                    }else
+                      if(document.getElementById('birthplaceID').value == 'Terravine'){
+                        document.getElementById('selectCity').innerHTML = '';
+                        city.innerHTML +=
+                        '<option id="a" value="Havana">Havana</option>'+
+                        '<option id="a" value="Limbo">Limbo</option>'+
+                        '<option id="a" value="Luxor">Luxor</option>'+
+                        '<option id="a" value="Stardust">Stardust</option>'+
+                        '<option id="a" value="Tribune">Tribune</option>';
+                      }else
+                        if(document.getElementById('birthplaceID').value == 'Torsk'){
+                          document.getElementById('selectCity').innerHTML = '';
+                          city.innerHTML +=
+                          '<option id="a" value="Baille">Baille</option>'+
+                          '<option id="a" value="Cerma">Cerma</option>'+
+                          '<option id="a" value="Duscan">Duscan</option>'+
+                          '<option id="a" value="Fallhale">Fallhale</option>'+
+                          '<option id="a" value="Verena">Verena</option>';
+                        }else
+                          if(document.getElementById('birthplaceID').value == 'Veccel'){
+                            document.getElementById('selectCity').innerHTML = '';
+                            city.innerHTML +=
+                            '<option id="a" value="Minertown">Minertown</option>'+
+                            '<option id="a" value="Nautillus">Nautillus</option>'+
+                            '<option id="a" value="Nore">Nore</option>'+
+                            '<option id="a" value="Raven">Raven</option>'+
+                            '<option id="a" value="Rustville">Rustville</option>';
+                          }else
+                            if(document.getElementById('birthplaceID').value == 'East Viea'){
+                              document.getElementById('selectCity').innerHTML = '';
+                              city.innerHTML +=
+                              '<option id="a" value="Atlas">Atlas</option>'+
+                              '<option id="a" value="Azuris">Azuris</option>'+
+                              '<option id="a" value="Chronos">Chronos</option>'+
+                              '<option id="a" value="Concept">Concept</option>'+
+                              '<option id="a" value="Cosmo">Cosmo</option>'+
+                              '<option id="a" value="Metroplex">Metroplex</option>'+
+                              '<option id="a" value="Neopolis">Neopolis</option>'+
+                              '<option id="a" value="Nimbus">Nimbus</option>'+
+                              '<option id="a" value="Pionix">Pionix</option>'+
+                              '<option id="a" value="Torens">Torens</option>'+
+                              '<option id="a" value="Torrus">Torrus</option>'+
+                              '<option id="a" value="Vendale">Vendale</option>'+
+                              '<option id="a" value="Vice">Vice</option>';
+                            }else
+                              if(document.getElementById('birthplaceID').value == 'South Viea'){
+                                document.getElementById('selectCity').innerHTML = '';
+                                city.innerHTML +=
+                                '<option id="a" value="Donner Viea">Donner Viea</option>'+
+                                '<option id="a" value="Kresse">Kresse</option>'+
+                                '<option id="a" value="Rodbell">Rodbell</option>'+
+                                '<option id="a" value="Transmund">Transmund</option>'+
+                                '<option id="a" value="Tropa">Tropa</option>'+
+                                '<option id="a" value="Verdegriss">Verdegriss</option>'+
+                                '<option id="a" value="Vierra">Vierra</option>';
+                              }else
+                                if(document.getElementById('birthplaceID').value == 'Zathurn'){
+                                  document.getElementById('selectCity').innerHTML = '';
+                                  city.innerHTML +=
+                                  '<option id="a" value="Duskbridge">Duskbridge</option>'+
+                                  '<option id="a" value="Jotun">Jotun</option>'+
+                                  '<option id="a" value="Rattlefang">Rattlefang</option>'+
+                                  '<option id="a" value="Roiplean">Roiplean</option>';
+                                }
+                    }
+
+          </script>
+
+
+        <div class="form-group" id="cityX">
+        <label class="control-label col-sm-2" for="cityID">City of Origin : </label>
+        <div class="col-sm-8" id="cityID">
+          <select class="form-control" id="selectCity" style="width: 45%;">
+
+            </select>
+
+        </div>
+      </div>
+
+
+
+          <div class="form-group">
+          <label class="control-label col-sm-2" for="affiliationID">Affiliation : </label>
+          <div class="col-sm-8">
+          <input type="text" class="form-control" id="affiliationID" placeholder="...">
+          </div>
+        </div>
+
+          <div class="form-group">
+          <label class="control-label col-sm-2" for="currentpostID">Active Post : </label>
+          <div class="col-sm-8">
+          <input type="text" class="form-control" id="currentpostID" placeholder="...">
+          </div>
+        </div>
+
+          <button type="submit" class="btn btn-primary" style="margin-top:20px; margin-left:40%;">Submit</button>
+        </form>
+      </div>
+
+
+        <div class="col-lg-12">
+          <div id="resultProfile">
+            </div>
+        </div>
+
+
+      <footer class="footer">
+        <p>&copy; 2017 Dorokata San's Design.</p>
+      </footer>
+
+    </div> <!-- /container -->
+
+    <!--   jQuery CDN   from https://code.jquery.com/    -->
+    <script
+   src="https://code.jquery.com/jquery-3.2.1.js"
+   integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
+   crossorigin="anonymous"></script>
+
+
+
+   <!--   BOOTSTRAP Javascript DIRECTORY LINK   -->
+   <script src="js/bootstrap.min.js" charset="utf-8"></script>
+    <script src="js/main.js" charset="utf-8"></script>
+
+
+
+  </body>
+</html>
