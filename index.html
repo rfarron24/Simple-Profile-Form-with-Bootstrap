@@ -1,99 +1,100 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 
-    <title>Profile Entry</title>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 
-    <!-- Bootstrap core CSS -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="css/style.css">
-  </head>
+  <title>Profile Entry</title>
 
-  <body onload="fetchges()">
+  <!-- Bootstrap core CSS -->
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
 
-    <div class="container">
-      <div class="header clearfix">
-        <h3 class="text-muted">Profiles Record</h3>
-      </div>
+<body onload="fetchges()">
 
-      <div class="jumbotron">
-        <h2>GES Profile Entry</h2>
-        <form class="form-horizontal" id="formEntry">
+  <div class="container">
+    <div class="header clearfix">
+      <h3 class="text-muted">Profiles Record</h3>
+    </div>
 
-          <div class="form-group">
+    <div class="jumbotron">
+      <h2>GES Profile Entry</h2>
+      <form class="form-horizontal" id="formEntry">
+
+        <div class="form-group">
           <label for="idID" class="control-label col-sm-2">ID : </label>
           <div class="col-sm-8">
-          <input type="text" class="form-control" id="idID" placeholder="ID" style="width: 45%; background-color:#F0DEA4; font-weight:bold;">
-        </div>
-        </div>
-
-          <div class="form-group">
-          <label class="control-label col-sm-2" for="nameID">Full Name : </label>
-          <div class="col-sm-8">
-          <input type="text" class="form-control" id="nameID" placeholder="Full Name">
+            <input type="text" class="form-control" id="idID" placeholder="ID" style="width: 45%; background-color:#F0DEA4; font-weight:bold;">
           </div>
         </div>
 
         <div class="form-group">
-        <label class="control-label col-sm-2" for="sexID">Sex : </label>
-        <div class="col-sm-8">
-        <select class="form-control" id="sexID" style="width:45%;">
+          <label class="control-label col-sm-2" for="nameID">Full Name : </label>
+          <div class="col-sm-8">
+            <input type="text" class="form-control" id="nameID" placeholder="Full Name">
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="control-label col-sm-2" for="sexID">Sex : </label>
+          <div class="col-sm-8">
+            <select class="form-control" id="sexID" style="width:45%;">
         <option value="Male">Male</option>
         <option value="Female">Female</option>
         </select>
+          </div>
         </div>
-      </div>
 
-          <div class="form-group">
+        <div class="form-group">
           <label class="control-label col-sm-2" for="ageID">Age : </label>
           <div class="col-sm-8">
-          <input type="text" class="form-control" id="ageID" placeholder="Age">
+            <input type="text" class="form-control" id="ageID" placeholder="Age">
           </div>
         </div>
 
-          <div class="form-group">
+        <div class="form-group">
           <label class="control-label col-sm-2" for="birthdateID">Date of Birth : </label>
           <div class="col-sm-8">
-          <input type="date" class="form-control" id="birthdateID"  max="1979-12-31" style="width: 45%;">
+            <input type="date" class="form-control" id="birthdateID" max="1979-12-31" style="width: 45%;">
           </div>
         </div>
 
-          <div class="form-group">
+        <div class="form-group">
           <label class="control-label col-sm-2" for="weightID">Weight : </label>
           <div class="col-sm-8">
-          <input type="text" class="form-control" id="weightID" placeholder="Kilograms">
+            <input type="text" class="form-control" id="weightID" placeholder="Kilograms">
           </div>
         </div>
 
-          <div class="form-group">
+        <div class="form-group">
           <label class="control-label col-sm-2" for="heightID">Height : </label>
           <div class="col-sm-8">
-          <input type="text" class="form-control" id="heightID" placeholder="Meters">
+            <input type="text" class="form-control" id="heightID" placeholder="Meters">
           </div>
         </div>
 
-          <div class="form-group">
+        <div class="form-group">
           <label class="control-label col-sm-2" for="eyeID">Eye Color : </label>
           <div class="col-sm-8">
-          <input type="text" class="form-control" id="eyeID" placeholder="...">
+            <input type="text" class="form-control" id="eyeID" placeholder="...">
           </div>
         </div>
 
-          <div class="form-group">
+        <div class="form-group">
           <label class="control-label col-sm-2" for="hairID">Hair Color : </label>
           <div class="col-sm-8">
-          <input type="text" class="form-control" id="hairID" placeholder="...">
+            <input type="text" class="form-control" id="hairID" placeholder="...">
           </div>
         </div>
 
-          <div class="form-group" id="bpcol">
+        <div class="form-group" id="bpcol">
           <label class="control-label col-sm-2" for="birthplaceID">Birthplace : </label>
           <div class="col-sm-8">
-          <select id="birthplaceID" class="form-control" style="width: 45%;"  onclick="city()">
+            <select id="birthplaceID" class="form-control" style="width: 45%;" onclick="city()">
               <option selected disabled>Choose territory...</option>
               <option value="Alexander">Alexander</option>
               <option value="Arkridge">Arkridge</option>
@@ -115,52 +116,51 @@
         </div>
 
         <div class="form-group" id="cityX">
-        <label class="control-label col-sm-2" for="cityID">City of Origin : </label>
-        <div class="col-sm-8" id="cityID">
-          <select class="form-control" id="selectCity" style="width: 45%;">
+          <label class="control-label col-sm-2" for="cityID">City of Origin : </label>
+          <div class="col-sm-8" id="cityID">
+            <select class="form-control" id="selectCity" style="width: 45%;">
             </select>
+          </div>
         </div>
-      </div>
 
         <div class="form-group">
           <label class="control-label col-sm-2" for="affiliationID">Affiliation : </label>
           <div class="col-sm-8">
-          <input type="text" class="form-control" id="affiliationID" placeholder="...">
+            <input type="text" class="form-control" id="affiliationID" placeholder="...">
           </div>
         </div>
 
-          <div class="form-group">
+        <div class="form-group">
           <label class="control-label col-sm-2" for="currentpostID">Active Post : </label>
           <div class="col-sm-8">
-          <input type="text" class="form-control" id="currentpostID" placeholder="...">
+            <input type="text" class="form-control" id="currentpostID" placeholder="...">
           </div>
         </div>
 
-          <button type="submit" class="btn btn-primary" style="margin-top:20px; margin-left:40%;">Submit</button>
-        </form>
+        <button type="submit" class="btn btn-primary" style="margin-top:20px; margin-left:40%;">Submit</button>
+      </form>
+    </div>
+
+    <div class="col-lg-12">
+      <div id="resultProfile">
       </div>
+    </div>
 
-        <div class="col-lg-12">
-          <div id="resultProfile">
-            </div>
-        </div>
+    <footer class="footer">
+      <p>&copy; 2017 Dorokata San's Design.</p>
+    </footer>
 
-      <footer class="footer">
-        <p>&copy; 2017 Dorokata San's Design.</p>
-      </footer>
+  </div>
+  <!-- /container -->
 
-    </div> <!-- /container -->
+  <!--   jQuery CDN   from https://code.jquery.com/    -->
+  <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
 
-    <!--   jQuery CDN   from https://code.jquery.com/    -->
-    <script
-   src="https://code.jquery.com/jquery-3.2.1.js"
-   integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
-   crossorigin="anonymous"></script>
+  <!--   BOOTSTRAP Javascript DIRECTORY LINK   -->
+  <script src="js/bootstrap.min.js" charset="utf-8"></script>
+  <script src="js/main.js" charset="utf-8"></script>
+  <script src="js/cities.js" charset="utf-8"></script>
 
-   <!--   BOOTSTRAP Javascript DIRECTORY LINK   -->
-   <script src="js/bootstrap.min.js" charset="utf-8"></script>
-    <script src="js/main.js" charset="utf-8"></script>
-    <script src="js/cities.js" charset="utf-8"></script>
+</body>
 
-  </body>
 </html>
