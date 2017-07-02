@@ -15,6 +15,9 @@ function save(e){
   var affiliation = document.getElementById('affiliationID').value;
   var activepost = document.getElementById('currentpostID').value;
 
+  if(!validateForm(id, name, sex, age, dob, weight, height, eye, hair, birthplace, cityorigin, affiliation, activepost)){
+    return false;
+  }
   var person = {
     idperson: id,
     nameperson: name,
@@ -82,7 +85,7 @@ function deleteprofile(id){
       var activepost = ges[i].activepostperson;
 
       profilelist.innerHTML += '<div class="well">' +
-                              '<label class="control-label col-sm-3"> ID : </label>'+
+                              '<label class="control-label col-sm-3">ID : </label>'+
                               '<h4>'  + id + '</h4>' +
                                '<label class="control-label col-sm-3">Name : </label>'+
                                '<h4>' + name + '</h4>' +
@@ -112,4 +115,15 @@ function deleteprofile(id){
                                '</div>';
 
     }
+  }
+
+  function validateForm(id, name, sex, age, dob, weight, height, eye, hair, birthplace, cityorigin, affiliation, activepost){
+
+    if(!id || !name || !sex || !age || !dob ||
+      !weight || !height || !eye || !hair || !birthplace ||
+      !cityorigin || !affiliation || !activepost){
+      alert("Please complete the form first!");
+      return false;
+    }
+    return true;
   }
