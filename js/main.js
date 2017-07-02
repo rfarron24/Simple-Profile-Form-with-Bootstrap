@@ -50,8 +50,9 @@ function save(e) {
 
 function deleteprofile(id) {
   var ges = JSON.parse(localStorage.getItem('ges'));
-  alert("Are you sure want to delete " + id + " ?");
+  var x = confirm("Are you sure want to delete " + id + " ?");
 
+if (x){
   for (var i = 0; i < ges.length; i++) {
     if (ges[i].idperson == id) {
       ges.splice(i, 1);
@@ -59,6 +60,10 @@ function deleteprofile(id) {
   }
   localStorage.setItem('ges', JSON.stringify(ges));
   fetchges();
+}else {
+  return false;
+    fetchges();
+}
 }
 
 function fetchges() {
