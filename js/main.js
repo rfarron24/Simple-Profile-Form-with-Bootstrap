@@ -129,5 +129,12 @@ function validateForm(id, name, sex, age, dob, weight, height, eye, hair, birthp
     alert("Please complete the form first!");
     return false;
   }
+  var expression = /^-?\d+\.?\d*$/;
+  var regex = new RegExp(expression);
+
+  if(!age.match(regex) || !weight.match(regex) || !height.match(regex)){
+     alert('Age, weight, and height should be in number');
+     return false;
+  }
   return true;
 }
