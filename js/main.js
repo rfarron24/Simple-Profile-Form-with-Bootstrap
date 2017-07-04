@@ -88,7 +88,7 @@ function fetchges() {
     var affiliation = ges[i].affiliationperson;
     var activepost = ges[i].activepostperson;
 
-    profilelist.innerHTML += '<div class="well">' +
+    profilelist.innerHTML += /* '<div class="well">' + */
       '<label class="control-label col-sm-3">ID : </label>' +
       '<h4>' + id + '</h4>' +
       '<label class="control-label col-sm-3">Name : </label>' +
