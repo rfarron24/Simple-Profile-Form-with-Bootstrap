@@ -48,13 +48,13 @@ function save(e) {
   e.preventDefault();
 }
 
-function deleteprofile(id) {
+function deleteprofile(name) {
   var ges = JSON.parse(localStorage.getItem('ges'));
-  var x = confirm("Are you sure want to delete " + id + " ?");
+  var x = confirm("Are you sure want to delete " + name + " ?");
 
 if (x){
   for (var i = 0; i < ges.length; i++) {
-    if (ges[i].idperson == id) {
+    if (ges[i].nameperson == name) {
       ges.splice(i, 1);
     }
   }
@@ -115,7 +115,7 @@ function fetchges() {
       '<h4>' + affiliation + '</h4>' +
       '<label class="control-label col-sm-4">Current Active Post : </label>' +
       '<h4>' + activepost + '</h4>' +
-      '<a href="#" onclick="deleteprofile(\'' + id + '\')" class="btn btn-danger" style="margin-left:3%;">Delete</a>' +
+      '<a href="#" onclick="deleteprofile(\'' + name + '\')" class="btn btn-danger" style="margin-left:3%;">Delete</a>' +
       '</div>';
 
   }
